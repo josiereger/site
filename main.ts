@@ -1,4 +1,5 @@
-import { serve } from "https://deno.land/std@0.162.0/http/server.ts";
+import { serve } from "https://deno.land/std@0.165.0/http/server.ts";
+import { contentType } from "https://deno.land/std@0.165.0/media_types/mod.ts";
 
 async function handler(req: Request): Promise<Response> {
   const url = new URL(req.url);
