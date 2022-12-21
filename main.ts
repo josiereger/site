@@ -11,6 +11,10 @@ async function handler(req: Request): Promise<Response> {
   if(path === "/") {
     return new Response(await file("./index.html"), { headers: { "content-type": contentType("html") } });
   }
+  
+  else if(path === "/index.css") {
+    return new Response(await file("./index.css"), { headers: { "content-type": contentType(file) } });
+  }
 
   else {
     return new Response("404", { headers: { "content-type": "text/plain" } });
