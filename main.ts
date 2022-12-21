@@ -8,7 +8,7 @@ async function handler(req: Request): Promise<Response> {
   const file_extension = url.pathname.split("/")[url.pathname.split("/").length - 1].split(".")[1];
 
   if(path === "/") {
-    return new Response(await file("/index.html"), { headers: { "content-type": contentType("html") } });
+    return new Response(await file("./index.html"), { headers: { "content-type": contentType("html") } });
   }
 
   else {
